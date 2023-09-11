@@ -126,7 +126,7 @@ export const Payment = () => {
               <Row className="p-1">
                 <Col className="p-1">
                   <Form.Group className="p-2">
-                    <FormLabel htmlFor="nameCreditCard">Nome cadastrado no cartão</FormLabel>
+                    <FormLabel htmlFor="nameCreditCard"> Nome cadastrado no cartão</FormLabel>
                     <Form.Control
                       type="text"
                       id="nameCreditCard"
@@ -143,7 +143,7 @@ export const Payment = () => {
               <Row className="p-1 justify-content-between">
                 <Col className="p-1 col-12">
                   <Form.Group className="p-2">
-                    <FormLabel htmlFor="numberCreditCard">Número do cartão </FormLabel>
+                    <FormLabel htmlFor="numberCreditCard"> Número do cartão </FormLabel>
                     <Form.Control
                       type="text"
                       id="numberCreditCard"
