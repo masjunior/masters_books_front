@@ -1,0 +1,89 @@
+.component {
+    border-radius: 100px;
+    height: 66px;
+    overflow: hidden;
+    position: relative;
+    width: 169px;
+}
+
+.component .overlap-group {
+    height: 60px;
+    position: absolute;
+    top: 3px;
+}
+
+.component .ellipse {
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    width: 60px;
+}
+
+.component .SIM {
+    color: transparent;
+    font-size: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 6px;
+}
+
+.component .n-o {
+    color: #ffffff;
+    font-family: "Segoe UI-Light", Helvetica;
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+}
+
+.component.frame-1 {
+    background-color: #000000;
+}
+
+.component.frame-2 {
+    background-color: #00a3ff;
+}
+
+.component.frame-1 .overlap-group {
+    left: 4px;
+    width: 78px;
+}
+
+.component.frame-2 .overlap-group {
+    left: 92px;
+    width: 73px;
+}
+
+.component.frame-1 .ellipse {
+    left: 0;
+}
+
+.component.frame-2 .ellipse {
+    left: 13px;
+}
+
+.component.frame-1 .SIM {
+    font-family: "Segoe UI-Light", Helvetica;
+    font-weight: 300;
+    left: 27px;
+}
+
+.component.frame-2 .SIM {
+    font-family: "Segoe UI-Bold", Helvetica;
+    font-weight: 700;
+    left: 0;
+}
+
+.component.frame-1 .n-o {
+    left: 84px;
+    top: 8px;
+}
+
+.component.frame-2 .n-o {
+    left: 35px;
+    top: 9px;
+}
