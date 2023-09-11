@@ -1,0 +1,8 @@
+{
+  "/Pages/Selected_Item/page": "app/Pages/Selected_Item/page.js",
+  "/Pages/Login/page": "app/Pages/Login/page.js",
+  "/Pages/Sign_In/page": "app/Pages/Sign_In/page.js",
+  "/Pages/Cart/page": "app/Pages/Cart/page.js",
+  "/Pages/Address/page": "app/Pages/Address/page.js",
+  "/Pages/Payment/page": "app/Pages/Payment/page.js"
+}
