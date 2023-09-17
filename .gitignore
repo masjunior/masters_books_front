@@ -286,6 +286,7 @@ FakesAssemblies/
 node_modules/
 node_modules/*
 
+
 # Visual Studio 6 build log
 *.plg
 
@@ -397,3 +398,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+#NEXT 
+.next
+.next/
+.next/*
