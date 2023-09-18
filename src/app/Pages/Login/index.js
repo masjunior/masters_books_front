@@ -1,10 +1,29 @@
 'use client'
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 
+
 export const Login = () => {
+  
+  const [user, setUser] = useState(null)
+  
+    useEffect(() => {
+      fetch('http://localhost:8080/mastersofbooks/clientes')
+        .then(res => {
+          console.log(`res: ${res.json}`);
+          console.log(res);
+          return res.json();
+        })
+        .then(data => {
+          console.log(`data: ${data}`);
+          console.log("DATA: " + data);
+          console.log(data);
+          return setUser(data);
+        });
+    }, [])
+
   return (
     <>
       <Container className="p-4 mt-4 mb-4 align-items-center justify-content-center w-50 h-50 border border-2 rounded-4 border-black" >
@@ -16,7 +35,7 @@ export const Login = () => {
           </Row>
           <Row className="p-1 w-100 h-100">
             <Col className="p1 d-flex align-items-center justify-content-center w-100 h-100">
-              <Form.Group className="w-75 h-75" controlId="email">
+              <Form.Group className="w-75 h-75" >
                 <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
                   type="email" placeholder="name@example.com"
@@ -28,7 +47,7 @@ export const Login = () => {
           </Row>
           <Row className="p-1 w-100 h-100">
             <Col className="p-1 d-flex align-items-center justify-content-center w-100 h-100">
-              <Form.Group className="w-75 h-75" controlId="password">
+              <Form.Group className="w-75 h-75" >
                 <Form.Label htmlFor="password">Senha</Form.Label>
                 <Form.Control
                   type="password"
@@ -40,7 +59,16 @@ export const Login = () => {
           </Row>
           <Row className="p-4">
             <Col className="p-1 d-flex align-items-center justify-content-center w-100 h-100">
-              <Button className="button outline-primary h-50 w-50">
+              <Button 
+                className="button outline-primary h-50 w-50"
+                // onClick={(e)=>{
+                //   e.preventDefault();
+                //   const { data, error, isLoading } = useSWR('http://localhost:8080/mastersofbooks/clientes', fetcher)
+                //   if (error) return <div>falhou em carregar</div>
+                //   if (isLoading) return <div>carregando...</div>
+                //   return <div>Olá {data.name}!</div>
+                // }}
+                >
                 <p className="text-center fs-3 ">Entrar</p>
               </Button>
             </Col>
