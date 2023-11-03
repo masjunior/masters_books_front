@@ -14,7 +14,7 @@ export const Sign_In = () => {
           </Col>
         </Row>
         <Row className="p-1 w-100 h-100">
-          <Col className="p1 d-flex align-items-center justify-content-center w-100 h-100">
+          <Col className="p-1 d-flex align-items-center justify-content-center w-100 h-100">
             <Form.Group className="w-75 h-75" controlId="name">
               <Form.Label htmlFor="name">Nome Completo</Form.Label>
               <Form.Control
@@ -26,7 +26,7 @@ export const Sign_In = () => {
           </Col>
         </Row>
         <Row className="p-1 w-100 h-100">
-          <Col className="p1 d-flex align-items-center justify-content-center w-100 h-100">
+          <Col className="p-1 d-flex align-items-center justify-content-center w-100 h-100">
             <Form.Group className="w-75 h-75" controlId="email">
               <Form.Label htmlFor="email">Email</Form.Label>
               <Form.Control
