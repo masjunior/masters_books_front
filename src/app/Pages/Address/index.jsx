@@ -36,6 +36,14 @@ export const Address = () => {
       ;
   }, [])
 
+  const [states, setStates] = useState([])
+  useEffect(() => {
+    fetch('http://localhost:8080/mastersofbooks/estados')
+      .then(res => res.json())
+      .then(data => setStates(data))
+      ;
+  }, [])
+
   function listOption(object) {
     return object.map((o) => (
       <option key={o.id} value={o.id}>
@@ -221,10 +229,7 @@ export const Address = () => {
                           required
                         >
                           <option value="">Selecione...</option>
-                          {typeResidences && console.log(typeResidences)}
                           {typeResidences && listOption(typeResidences)}
-                          {/* <option value="1">Apartamento</option>
-                          <option value="2">Casa</option> */}
                         </Form.Select>
                       </Form.Group>
                     </Col>
@@ -282,8 +287,7 @@ export const Address = () => {
                           required
                         >
                           <option value="">Selecione...</option>
-                          <option value="1">São Paulo</option>
-                          <option value="2">Rio de Janeiro</option>
+                          {states && listOption(states)}
                         </Form.Select>
                       </Form.Group>
                     </Col>
